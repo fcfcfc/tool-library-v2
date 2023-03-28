@@ -1,22 +1,22 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import createPersistedState from 'vuex-persistedstate'
+import { defineStore } from 'pinia'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-    state: {},
-    getters: {},
-    mutations: {},
-    actions: {},
-    modules: {},
-    plugins: [
-        createPersistedState({
-            key: 'session_info',
-            storage: window.sessionStorage,
-            reducer(val) {
-                return val
-            }
-        })
-    ]
+export const useMyStore = defineStore('myStore', {
+    state: () => {
+        return {
+            num: 0
+        }
+    },
+    getters: {
+        testStore() {
+            return this.num
+        }
+    },
+    actions: {
+        changeNumFn(newVal) {
+            this.num = newVal
+        }
+    },
+    persist: {
+        storage: sessionStorage
+    }
 })

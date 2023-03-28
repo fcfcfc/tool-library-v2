@@ -40,7 +40,6 @@ export default {
 
 <style lang="scss" scoped>
 .sliderCom {
-    padding: 16px;
     .sliderStyle {
         margin-left: 24px;
         width: 300px;

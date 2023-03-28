@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import element from '@/router/element';
+import testPinia from '@/router/testPinia';
 
 Vue.use(VueRouter)
 
@@ -8,21 +10,8 @@ const routes = [
         path: '/',
         name: 'home',
         component: () => import('@/views/HomeView.vue')
-    },
-    {
-        path: '/element',
-        name: 'element',
-        redirect: '/element/slider',
-        component: () => import('@/views/RouterView.vue'),
-        children: [
-            {
-                path: 'slider',
-                name: 'slider',
-                component: () => import('@/views/element/SliderCom.vue')
-            }
-        ]
     }
-]
+].concat(element, testPinia)
 
 const router = new VueRouter({
     mode: 'history',
