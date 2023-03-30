@@ -2,7 +2,7 @@
     <div class="sliderCom">
         <div flex="cross:center">
             <div>当前值：{{initVal}}</div>
-            <my-slider :if-preview="false"
+            <slider-component :if-preview="false"
                        :init-val="initVal"
                        @getNewValueFn="val=>initVal=val"
                        :marks="marks"
@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import MySlider from '@/components/element/MySlider.vue';
+import SliderComponent from '@/components/element/SliderComponent.vue';
 
 export default {
     name: 'SliderCom',
     components: {
-        MySlider
+        SliderComponent
     },
     data() {
         return {

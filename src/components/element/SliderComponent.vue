@@ -4,7 +4,7 @@
                :style="{'--step-color': stepColor[sliderVal]}"
                :show-tooltip="false"
                :max="max"
-               class="mySlider"
+               class="sliderComponent"
                :disabled="ifPreview"
                show-stops
                :marks="marks"/>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-    name: 'MySlider',
+    name: 'SliderComponent',
     props: {
         /**
          * 初始值
@@ -83,7 +83,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.mySlider {
+.sliderComponent {
     ::v-deep .el-slider__stop:first-child, ::v-deep .el-slider__stop:last-child {
         display: none;
     }
