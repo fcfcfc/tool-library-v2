@@ -3,12 +3,12 @@
         <div flex="cross:center">
             <div>当前值：{{initVal}}</div>
             <slider-component :if-preview="false"
-                       :init-val="initVal"
-                       @getNewValueFn="val=>initVal=val"
-                       :marks="marks"
-                       :step-color="stepColor"
-                       class="sliderStyle"
-                       :max="5"/>
+                              :init-val="initVal"
+                              @getNewValueFn="val=>initVal=val"
+                              :marks="marks"
+                              :step-color="stepColor"
+                              class="sliderStyle"
+                              :max="5"/>
         </div>
     </div>
 </template>
