@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import element from '@/router/element';
-import testPinia from '@/router/testPinia';
 
 Vue.use(VueRouter)
 
@@ -11,7 +10,7 @@ const routes = [
         name: 'home',
         component: () => import('@/views/HomeView.vue')
     }
-].concat(element, testPinia)
+].concat(element)
 
 const router = new VueRouter({
     mode: 'history',
