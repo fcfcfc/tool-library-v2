@@ -4,7 +4,7 @@
             <div>当前值：{{initVal}}</div>
             <slider-component :if-preview="false"
                               :init-val="initVal"
-                              @getNewValue="val=>initVal=val"
+                              @getNewValueFn="val=>initVal=val"
                               :marks="marks"
                               :step-color="stepColor"
                               class="sliderStyle"

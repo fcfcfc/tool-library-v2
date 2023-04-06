@@ -53,7 +53,7 @@ export default {
         /**
          * 值改变时触发（使用鼠标拖曳时，只在松开鼠标后触发）
          */
-        'getNewValue'
+        'getNewValueFn'
     ],
     data() {
         return {
@@ -65,11 +65,11 @@ export default {
     },
     watch: {
         /**
-         * 绑定值改变时触发getNewValue
+         * 绑定值改变时触发getNewValueFn
          * @param val
          */
         sliderVal(val) {
-            this.$emit('getNewValue', val)
+            this.$emit('getNewValueFn', val)
         },
         /**
          * 初始值改变时，同步改变绑定值
