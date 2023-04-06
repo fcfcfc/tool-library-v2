@@ -3,7 +3,7 @@ export default [
         path: '/element',
         name: 'element',
         redirect: '/element/slider',
-        component: () => import('@/views/RouterView.vue'),
+        component: () => import('@/views/element/ElementView.vue'),
         children: [
             {
                 path: 'slider',
