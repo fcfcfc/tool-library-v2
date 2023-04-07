@@ -1,9 +1,10 @@
 export default [
     {
         path: '/element',
-        name: 'element',
         redirect: '/element/slider',
-        component: () => import('@/views/element/ElementView.vue'),
+        component: {
+            render: e => e('router-view')
+        },
         children: [
             {
                 path: 'slider',
