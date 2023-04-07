@@ -52,6 +52,7 @@ export default {
     emits: [
         /**
          * 值改变时触发（使用鼠标拖曳时，只在松开鼠标后触发）
+         * 回调参数：val：绑定值
          */
         'getNewValueFn'
     ],
