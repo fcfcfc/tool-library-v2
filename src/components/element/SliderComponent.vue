@@ -3,6 +3,7 @@
                :step="1"
                :style="{'--step-color': stepColor[sliderVal]}"
                :show-tooltip="false"
+               :min="min"
                :max="max"
                class="sliderComponent"
                :disabled="ifPreview"
@@ -36,6 +37,13 @@ export default {
             default() {
                 return []
             }
+        },
+        /**
+         * 最小值
+         */
+        min: {
+            type: Number,
+            default: 0
         },
         /**
          * 最大值
