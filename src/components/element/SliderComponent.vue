@@ -1,7 +1,7 @@
 <template>
     <el-slider v-model="sliderVal"
                :step="1"
-               :style="{'--step-color': stepColor[sliderVal]}"
+               :style="{'--step-color': stepColor[sliderVal-min]}"
                :show-tooltip="false"
                :min="min"
                :max="max"
